@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         .dropdown-menu-center {
-            top:40px!important;
-            right: auto!important;
-            left: 50%!important;
-            width:100%!important;
-            text-align:center!important;
-            -webkit-transform: translate(-50%, 0)!important;
-            -o-transform: translate(-50%, 0)!important;
-            transform: translate(-50%, 0)!important;
+            top: 40px !important;
+            right: auto !important;
+            left: 50% !important;
+            width: 100% !important;
+            text-align: center !important;
+            -webkit-transform: translate(-50%, 0) !important;
+            -o-transform: translate(-50%, 0) !important;
+            transform: translate(-50%, 0) !important;
         }
     </style>
 
@@ -23,111 +23,157 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <div class="row">
-        <div class="container">
+        <div class="col-6">
             <div class="dropdown">
-                <div class="dropdown col-xs-12 text-center">
-                    <button class="btn btn-secondary dropdown-toggle" style="width: 100%;" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Body Part
+                <button class="btn btn-secondary dropdown-toggle col-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Body Part
+                </button>
+                <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu1">
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Chest')">Chest</li>
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Back')">Back</li>
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Shoulders')">Shoulders</li>
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Biceps')">Biceps</li>
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Triceps')">Triceps</li>
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Glutes')">Glutes</li>
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Legs')">Legs</li>
+                    <li class="dropdown-item" href="#" onclick="openTabMain('v-pills-Calves')">Calves</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 tab-content">
+            <div class="tab-pane main fade" id="v-pills-Chest" role="tabpanel" aria-labelledby="v-pills-Chest-tab">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" style="width: 100%;" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chest part
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu2">
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Chest')">Chest</li>
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Back')">Back</li>
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Shoulders')">Shoulders</li>
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Biceps')">Biceps</li>
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Triceps')">Triceps</li>
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Glutes')">Glutes</li>
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Legs')">Legs</li>
-                        <li class="dropdown-item" href="#" onclick="openTab('v-pills-Calves')">Calves</li>
+                    <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu3">
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lowerchest','chest')">Lower Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-middlechest','chest')">Middle Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-upperchest','chest')">Upper Chest</li>
                     </ul>
                 </div>
             </div>
-            <div class="tab-content col-xs-12" id="myTabContent">
-                <div class="tab-pane fade" id="v-pills-Chest" role="tabpanel" aria-labelledby="v-pills-Chest-tab">
-                    <div class="col-xs-12">
-                        <div class="row">
-                            <img style="width: 100%; height:auto;" src="Images/lowerchest.png" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="col-xs-12">
-                        <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest1.gif" />
-                    </div>
-                    <br />
-                    <div class="col-xs-12">
-                        <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest2.gif" />
-                    </div>
-                    <br />
-                    <div class="col-xs-12">
-                        <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest3.gif" />
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-Back" role="tabpanel" aria-labelledby="v-pills-Back-tab">Back content</div>
-                <div class="tab-pane fade" id="v-pills-Shoulders" role="tabpanel" aria-labelledby="v-pills-Shoulders-tab">Shoulders content</div>
-                <div class="tab-pane fade" id="v-pills-Biceps" role="tabpanel" aria-labelledby="v-pills-Biceps-tab">Biceps content</div>
-                <div class="tab-pane fade" id="v-pills-Triceps" role="tabpanel" aria-labelledby="v-pills-Triceps-tab">Triceps content</div>
-                <div class="tab-pane fade" id="v-pills-Glutes" role="tabpanel" aria-labelledby="v-pills-Glutes-tab">Glutes content</div>
-                <div class="tab-pane fade" id="v-pills-Legs" role="tabpanel" aria-labelledby="v-pills-Legs-tab">Legs content</div>
-                <div class="tab-pane fade" id="v-pills-Calves" role="tabpanel" aria-labelledby="v-pills-Calves-tab">Calves content</div>
-            </div>
-        </div>
-        <!--<div class="col-3">
-        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active" id="v-pills-Chest-tab" data-toggle="pill" href="#v-pills-Chest" role="tab" aria-controls="v-pills-Chest" aria-selected="true">Chest</a>
-            <a class="nav-link" id="v-pills-Back-tab" data-toggle="pill" href="#v-pills-Back" role="tab" aria-controls="v-pills-Back" aria-selected="false">Back</a>
-            <a class="nav-link" id="v-pills-Shoulders-tab" data-toggle="pill" href="#v-pills-Shoulders" role="tab" aria-controls="v-pills-Shoulders" aria-selected="false">Shoulders</a>
-            <a class="nav-link" id="v-pills-Biceps-tab" data-toggle="pill" href="#v-pills-Biceps" role="tab" aria-controls="v-pills-Biceps" aria-selected="false">Biceps</a>
-            <a class="nav-link" id="v-pills-Triceps-tab" data-toggle="pill" href="#v-pills-Triceps" role="tab" aria-controls="v-pills-Triceps" aria-selected="true">Triceps</a>
-            <a class="nav-link" id="v-pills-Glutes-tab" data-toggle="pill" href="#v-pills-Glutes" role="tab" aria-controls="v-pills-Glutes" aria-selected="false">Glutes</a>
-            <a class="nav-link" id="v-pills-Legs-tab" data-toggle="pill" href="#v-pills-Legs" role="tab" aria-controls="v-pills-Legs" aria-selected="false">Legs</a>
-            <a class="nav-link" id="v-pills-Calves-tab" data-toggle="pill" href="#v-pills-Calves" role="tab" aria-controls="v-pills-Calves" aria-selected="false">Calves</a>
-        </div>
-    </div>-->
-        <!--<div class="col-xs-12" style="display:none;">
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-Chest" role="tabpanel" aria-labelledby="v-pills-Chest-tab">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="pills-lowerchest-tab" data-toggle="pill" href="#pills-lowerchest" role="tab" aria-controls="pills-home" aria-selected="true">Lower Chest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-middlechest-tab" data-toggle="pill" href="#pills-middlechest" role="tab" aria-controls="pills-profile" aria-selected="false">Middle Chest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-upperchest-tab" data-toggle="pill" href="#pills-upperchest" role="tab" aria-controls="pills-contact" aria-selected="false">Upper Chest</a>
-                        </li>
+            <div class="tab-pane main fade" id="v-pills-Back" role="tabpanel" aria-labelledby="v-pills-Back-tab">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" style="width: 100%;" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Back part
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu4">
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lats','back')">Lower Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-middleback','back')">Middle Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lowerback','back')">Upper Chest</li>
                     </ul>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-lowerchest" role="tabpanel" aria-labelledby="pills-lowerchest-tab">
-                            <div class="col-xs-12">
-                                <div class="col-xs-12 text-center">
-                                    <label>Lower Chest</label>
-                                </div>
-                                <div class="col-xs-12">
-                                    <img style="width: 100%; height:auto;" src="Images/lowerchest.png" />
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest1.gif" />
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-middlechest" role="tabpanel" aria-labelledby="pills-middlechest-tab">...</div>
-                        <div class="tab-pane fade" id="pills-upperchest" role="tabpanel" aria-labelledby="pills-upperchest-tab">...</div>
-                    </div>
-
                 </div>
-                <div class="tab-pane fade" id="v-pills-Back" role="tabpanel" aria-labelledby="v-pills-Back-tab">2</div>
-                <div class="tab-pane fade" id="v-pills-Shoulders" role="tabpanel" aria-labelledby="v-pills-Shoulders-tab">3</div>
-                <div class="tab-pane fade" id="v-pills-Biceps" role="tabpanel" aria-labelledby="v-pills-Biceps-tab">4</div>
-                <div class="tab-pane fade" id="v-pills-Triceps" role="tabpanel" aria-labelledby="v-pills-Triceps-tab">1</div>
-                <div class="tab-pane fade" id="v-pills-Glutes" role="tabpanel" aria-labelledby="v-pills-Glutes-tab">2</div>
-                <div class="tab-pane fade" id="v-pills-Legs" role="tabpanel" aria-labelledby="v-pills-Legs-tab">3</div>
-                <div class="tab-pane fade" id="v-pills-Calves" role="tabpanel" aria-labelledby="v-pills-Calves-tab">4</div>
             </div>
-        </div>-->
+            <div class="tab-pane main fade" id="v-pills-Shoulders" role="tabpanel" aria-labelledby="v-pills-Shoulders-tab">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" style="width: 100%;" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Back part
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu5">
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-anteriordeltiod','Shoulders')">Lower Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-medialdeltiod','Shoulders')">Middle Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-posteriordeltiod','Shoulders')">Upper Chest</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="tab-pane main fade" id="v-pills-Biceps" role="tabpanel" aria-labelledby="v-pills-Biceps-tab">Biceps content</div>
+            <div class="tab-pane main fade" id="v-pills-Triceps" role="tabpanel" aria-labelledby="v-pills-Triceps-tab">Triceps content</div>
+            <div class="tab-pane main fade" id="v-pills-Glutes" role="tabpanel" aria-labelledby="v-pills-Glutes-tab">Glutes content</div>
+            <div class="tab-pane main fade" id="v-pills-Legs" role="tabpanel" aria-labelledby="v-pills-Legs-tab">Legs content</div>
+            <div class="tab-pane main fade" id="v-pills-Calves" role="tabpanel" aria-labelledby="v-pills-Calves-tab">Calves content</div>
+        </div>
+      
     </div>
+    <div class="tab-content col-xs-12" id="chesttab">
+        <div class="tab-pane chest fade" id="v-pills-lowerchest" role="tabpanel" aria-labelledby="v-pills-lowerchest-tab">
+            <div class="col-xs-12">
+                <div class="row">
+                    <img style="width: 100%; height:auto;" src="Images/lowerchest.png" />
+                </div>
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest1.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest2.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest3.gif" />
+            </div>
+        </div>
+        <div class="tab-pane chest fade" id="v-pills-middlechest" role="tabpanel" aria-labelledby="v-pills-middlechest-tab">
+            <div class="col-xs-12">
+                <div class="row">
+                    <img style="width: 100%; height:auto;" src="Images/middlechest.png" />
+                </div>
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest1.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest2.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest3.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest3.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest4.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest5.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest6.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest7.gif" />
+            </div>
+        </div>
+        <div class="tab-pane chest fade" id="v-pills-upperchest" role="tabpanel" aria-labelledby="v-pills-upperchest-tab">Shoulders content</div>
+    </div>
+
+    <div class="tab-content col-xs-12" id="backtab">
+        <div class="tab-pane back fade" id="v-pills-lats" role="tabpanel" aria-labelledby="v-pills-lats-tab">
+            <div class="col-xs-12">
+                <div class="row">
+                    <img style="width: 100%; height:auto;" src="Images/lowerchest.png" />
+                </div>
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest1.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest2.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest3.gif" />
+            </div>
+        </div>
+        <div class="tab-pane back fade" id="v-pills-middleback" role="tabpanel" aria-labelledby="v-pills-middleback-tab">Back content</div>
+        <div class="tab-pane back fade" id="v-pills-lowerback" role="tabpanel" aria-labelledby="v-pills-lowerback-tab">Shoulders content</div>
+    </div>
+
+
 
     <!-- Modal -->
     <div class="modal fade" id="gifModal" tabindex="-1" aria-labelledby="gifModalLabel" aria-hidden="true">
@@ -162,9 +208,9 @@
             $('#gifModal').modal('hide');
         });
 
-        function openTab(tabId) {
+        function openTabMain(tabId) {
             // Hide all tab content
-            var tabContents = document.querySelectorAll('.tab-pane');
+            var tabContents = document.querySelectorAll('.tab-pane.main');
             tabContents.forEach(function (tabContent) {
                 tabContent.classList.remove('show');
                 tabContent.classList.remove('active');
@@ -175,6 +221,21 @@
             tab.classList.add('show');
             tab.classList.add('active');
         }
+
+        function openTabSubtab(tabId, cls) {
+            // Hide all tab content
+            var tabContents = document.querySelectorAll('.tab-pane.' + cls);
+            tabContents.forEach(function (tabContent) {
+                tabContent.classList.remove('show');
+                tabContent.classList.remove('active');
+            });
+
+            // Show the selected tab
+            var tab = document.getElementById(tabId);
+            tab.classList.add('show');
+            tab.classList.add('active');
+        }
+
     </script>
 
 </body>

@@ -15,6 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{387414
 		Images\lowerchest2.gif = Images\lowerchest2.gif
 		Images\lowerchest3.gif = Images\lowerchest3.gif
 		Images\middlechest.png = Images\middlechest.png
+		Images\middlechest1.gif = Images\middlechest1.gif
+		Images\middlechest2.gif = Images\middlechest2.gif
+		Images\middlechest3.gif = Images\middlechest3.gif
+		Images\middlechest4.gif = Images\middlechest4.gif
+		Images\middlechest5.gif = Images\middlechest5.gif
+		Images\middlechest6.gif = Images\middlechest6.gif
+		Images\middlechest7.gif = Images\middlechest7.gif
 		Images\upperchest.png = Images\upperchest.png
 	EndProjectSection
 EndProject
