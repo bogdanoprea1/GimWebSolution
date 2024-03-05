@@ -8,9 +8,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		HTMLPage1.html = HTMLPage1.html
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{30394C51-0E59-4738-A7E5-57DE5864AEAB}"
+	ProjectSection(SolutionItems) = preProject
+		Images\lowerchest.png = Images\lowerchest.png
+		Images\lowerchest1.gif = Images\lowerchest1.gif
+		Images\lowerchest2.gif = Images\lowerchest2.gif
+		Images\lowerchest3.gif = Images\lowerchest3.gif
+		Images\middlechest.png = Images\middlechest.png
+		Images\upperchest.png = Images\upperchest.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30394C51-0E59-4738-A7E5-57DE5864AEAB} = {6C518D0D-0511-4B3D-9B8A-3DE925DE9FB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {929F0BEE-FECC-48C4-BD5E-46D7EE664677}

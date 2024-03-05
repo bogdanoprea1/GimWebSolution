@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabbed List with Images and GIFs</title>
+    <title>Exercise Tabs</title>
     <style>
         .tabcontent {
             display: none;
@@ -13,85 +13,94 @@
 <body>
 
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'tab1')">Tab 1</button>
-        <button class="tablinks" onclick="openTab(event, 'tab2')">Tab 2</button>
-        <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
+        <button class="tablinks" onclick="openTab(event, 'tabchest')">Chest</button>
+        <button class="tablinks" onclick="openTab(event, 'tabback')">Back</button>
+        <button class="tablinks" onclick="openTab(event, 'tabshoulders')">Shoulders</button>
+        <button class="tablinks" onclick="openTab(event, 'tabbiceps')">Biceps</button>
+        <button class="tablinks" onclick="openTab(event, 'tabtriceps')">Triceps</button>
+        <button class="tablinks" onclick="openTab(event, 'tabglutes')">Glutes</button>
+        <button class="tablinks" onclick="openTab(event, 'tablegs')">Legs</button>
+        <button class="tablinks" onclick="openTab(event, 'tabcalves')">Calves</button>
     </div>
 
-    <div id="tab1" class="tabcontent">
-        <h3>Tab 1 Content</h3>
-        <ul>
-            <li>
-                <h4>Title 1</h4>
-                <img src="image1.jpg" alt="Image 1">
-                <ul>
-                    <li>
-                        <h5>Sub Title 1</h5>
-                        <img src="image1.gif" alt="GIF 1">
-                    </li>
-                    <li>
-                        <h5>Sub Title 2</h5>
-                        <img src="image2.gif" alt="GIF 2">
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div id="tabchest" class="tabcontent">
+        <div class="subtab">
+            <button class="subtablinks" onclick="openSubTab(event, 'lowerchest')">Lower Chest</button>
+            <button class="subtablinks" onclick="openSubTab(event, 'middlechest')">Middle Chest</button>
+            <button class="subtablinks" onclick="openSubTab(event, 'upperchest')">Upper Chest</button>
+        </div>
+
+        <div id="lowerchest" class="subtabcontent">
+            <h3>Lower Chest</h3>
+            <img src="./Images/lowerchest.jpg" alt="Lower Chest Image">
+        </div>
+
+        <div id="middlechest" class="subtabcontent">
+            <h3>Middle Chest</h3>
+            <img src="middle_chest.jpg" alt="Middle Chest Image">
+        </div>
+
+        <div id="upperchest" class="subtabcontent">
+            <h3>Upper Chest</h3>
+            <img src="upper_chest.jpg" alt="Upper Chest Image">
+        </div>
     </div>
 
-    <div id="tab2" class="tabcontent">
-        <h3>Tab 2 Content</h3>
-        <ul>
-            <li>
-                <h4>Title 2</h4>
-                <img src="image2.jpg" alt="Image 2">
-                <ul>
-                    <li>
-                        <h5>Sub Title 3</h5>
-                        <img src="image3.gif" alt="GIF 3">
-                    </li>
-                    <li>
-                        <h5>Sub Title 4</h5>
-                        <img src="image4.gif" alt="GIF 4">
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div id="tabback" class="tabcontent">
+        <!-- Content for Back tab -->
     </div>
 
-    <div id="tab3" class="tabcontent">
-        <h3>Tab 3 Content</h3>
-        <ul>
-            <li>
-                <h4>Title 3</h4>
-                <img src="image3.jpg" alt="Image 3">
-                <ul>
-                    <li>
-                        <h5>Sub Title 5</h5>
-                        <img src="image5.gif" alt="GIF 5">
-                    </li>
-                    <li>
-                        <h5>Sub Title 6</h5>
-                        <img src="image6.gif" alt="GIF 6">
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div id="tabshoulders" class="tabcontent">
+        <!-- Content for Shoulders tab -->
+    </div>
+
+    <div id="tabbiceps" class="tabcontent">
+        <!-- Content for Biceps tab -->
+    </div>
+
+    <div id="tabtriceps" class="tabcontent">
+        <!-- Content for Triceps tab -->
+    </div>
+
+    <div id="tabglutes" class="tabcontent">
+        <!-- Content for Glutes tab -->
+    </div>
+
+    <div id="tablegs" class="tabcontent">
+        <!-- Content for Legs tab -->
+    </div>
+
+    <div id="tabcalves" class="tabcontent">
+        <!-- Content for Calves tab -->
     </div>
 
     <script>
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        function openSubTab(evt, subtabName) {
+            var i, subtabcontent, subtablinks;
+            subtabcontent = document.getElementsByClassName("subtabcontent");
+            for (i = 0; i < subtabcontent.length; i++) {
+                subtabcontent[i].style.display = "none";
+            }
+            subtablinks = document.getElementsByClassName("subtablinks");
+            for (i = 0; i < subtablinks.length; i++) {
+                subtablinks[i].className = subtablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(subtabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 
 </body>
