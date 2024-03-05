@@ -15,6 +15,12 @@
             -o-transform: translate(-50%, 0) !important;
             transform: translate(-50%, 0) !important;
         }
+        .fixed-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 10px;
+            padding: 20px;
+        }
     </style>
 
     <title>Exercise</title>
@@ -23,8 +29,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <div class="row">
-        <div class="col-6">
+    <div class="row fixed-top">
+        <div class="col-6 ">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle col-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Body Part
@@ -48,9 +54,9 @@
                         Chest part
                     </button>
                     <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu3">
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lowerchest','chest')">Lower Chest</li>
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-middlechest','chest')">Middle Chest</li>
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-upperchest','chest')">Upper Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lowerchest')">Lower Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-middlechest')">Middle Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-upperchest')">Upper Chest</li>
                     </ul>
                 </div>
             </div>
@@ -60,21 +66,21 @@
                         Back part
                     </button>
                     <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu4">
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lats','back')">Lower Chest</li>
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-middleback','back')">Middle Chest</li>
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lowerback','back')">Upper Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lats')">Lats</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-middleback')">Middle Back</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-lowerback')">Lower Back</li>
                     </ul>
                 </div>
             </div>
             <div class="tab-pane main fade" id="v-pills-Shoulders" role="tabpanel" aria-labelledby="v-pills-Shoulders-tab">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" style="width: 100%;" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Back part
+                        Shoulders part
                     </button>
                     <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu5">
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-anteriordeltiod','Shoulders')">Lower Chest</li>
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-medialdeltiod','Shoulders')">Middle Chest</li>
-                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-posteriordeltiod','Shoulders')">Upper Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-anteriordeltiod','shoulders')">Lower Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-medialdeltiod','shoulders')">Middle Chest</li>
+                        <li class="dropdown-item" href="#" onclick="openTabSubtab('v-pills-posteriordeltiod','shoulders')">Upper Chest</li>
                     </ul>
                 </div>
 
@@ -88,7 +94,7 @@
       
     </div>
     <div class="tab-content col-xs-12" id="chesttab">
-        <div class="tab-pane chest fade" id="v-pills-lowerchest" role="tabpanel" aria-labelledby="v-pills-lowerchest-tab">
+        <div class="tab-pane child fade" id="v-pills-lowerchest" role="tabpanel" aria-labelledby="v-pills-lowerchest-tab">
             <div class="col-xs-12">
                 <div class="row">
                     <img style="width: 100%; height:auto;" src="Images/lowerchest.png" />
@@ -107,7 +113,7 @@
                 <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest3.gif" />
             </div>
         </div>
-        <div class="tab-pane chest fade" id="v-pills-middlechest" role="tabpanel" aria-labelledby="v-pills-middlechest-tab">
+        <div class="tab-pane child fade" id="v-pills-middlechest" role="tabpanel" aria-labelledby="v-pills-middlechest-tab">
             <div class="col-xs-12">
                 <div class="row">
                     <img style="width: 100%; height:auto;" src="Images/middlechest.png" />
@@ -120,10 +126,6 @@
             <br />
             <div class="col-xs-12">
                 <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest2.gif" />
-            </div>
-            <br />
-            <div class="col-xs-12">
-                <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest3.gif" />
             </div>
             <br />
             <div class="col-xs-12">
@@ -146,31 +148,61 @@
                 <img style="width: 100%; height:auto;" class="gif-img" src="Images/middlechest7.gif" />
             </div>
         </div>
-        <div class="tab-pane chest fade" id="v-pills-upperchest" role="tabpanel" aria-labelledby="v-pills-upperchest-tab">Shoulders content</div>
-    </div>
-
-    <div class="tab-content col-xs-12" id="backtab">
-        <div class="tab-pane back fade" id="v-pills-lats" role="tabpanel" aria-labelledby="v-pills-lats-tab">
+        <div class="tab-pane child fade" id="v-pills-upperchest" role="tabpanel" aria-labelledby="v-pills-upperchest-tab">
             <div class="col-xs-12">
                 <div class="row">
-                    <img style="width: 100%; height:auto;" src="Images/lowerchest.png" />
+                    <img style="width: 100%; height:auto;" src="Images/upperchest.png" />
                 </div>
             </div>
             <br />
             <div class="col-xs-12">
-                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest1.gif" />
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/upperchest1.gif" />
             </div>
             <br />
             <div class="col-xs-12">
-                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest2.gif" />
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/upperchest2.gif" />
             </div>
             <br />
             <div class="col-xs-12">
-                <img style="width: 100%; height:auto;" class="gif-img" src="Images/lowerchest3.gif" />
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/upperchest3.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/upperchest4.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/upperchest5.gif" />
+            </div>
+            <br />
+            <div class="col-xs-12">
+                <img style="width: 100%; height:auto;" class="gif-img" src="Images/upperchest6.gif" />
             </div>
         </div>
-        <div class="tab-pane back fade" id="v-pills-middleback" role="tabpanel" aria-labelledby="v-pills-middleback-tab">Back content</div>
-        <div class="tab-pane back fade" id="v-pills-lowerback" role="tabpanel" aria-labelledby="v-pills-lowerback-tab">Shoulders content</div>
+    </div>
+
+    <div class="tab-content col-xs-12" id="backtab">
+        <div class="tab-pane child fade" id="v-pills-lats" role="tabpanel" aria-labelledby="v-pills-lats-tab">
+            <div class="col-xs-12">
+                <div class="row">
+                    <img style="width: 100%; height:auto;" src="Images/back1.png" />
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane child fade" id="v-pills-middleback" role="tabpanel" aria-labelledby="v-pills-middleback-tab">
+            <div class="col-xs-12">
+                <div class="row">
+                    <img style="width: 100%; height:auto;" src="Images/back2.png" />
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane child fade" id="v-pills-lowerback" role="tabpanel" aria-labelledby="v-pills-lowerback-tab">
+            <div class="col-xs-12">
+                <div class="row">
+                    <img style="width: 100%; height:auto;" src="Images/back3.png" />
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -222,9 +254,9 @@
             tab.classList.add('active');
         }
 
-        function openTabSubtab(tabId, cls) {
+        function openTabSubtab(tabId) {
             // Hide all tab content
-            var tabContents = document.querySelectorAll('.tab-pane.' + cls);
+            var tabContents = document.querySelectorAll('.tab-pane.child');
             tabContents.forEach(function (tabContent) {
                 tabContent.classList.remove('show');
                 tabContent.classList.remove('active');
